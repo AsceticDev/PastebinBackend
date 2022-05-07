@@ -1,9 +1,0 @@
-default_context:
-    project_name: "pastebinBackend"
-    app_name: "pastebinBackend"
-    python_version: "3.8"
-    admin_user_username: "codedelve"
-    admin_user_email: "admin@mail.com"
-    admin_user_password: "test123"
-    use_celery: "no"
-    wsgi_server: "gunicorn"
