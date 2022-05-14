@@ -7,10 +7,10 @@ class Paste(db.Model):
 
     __tablename__ = "paste"
     id = db.Column(db.Integer, primary_key=True);
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     title = db.Column(db.String(100), nullable=False);
     content = db.Column(db.Text(), nullable=False);
     createdAt = db.Column(db.DateTime, nullable=False, default=datetime.utcnow);
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     # optional
     encrypted = db.Column(db.Boolean, default=False);
 
