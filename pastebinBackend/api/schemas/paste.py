@@ -4,7 +4,7 @@ from pastebinBackend.extensions import ma,db
 class PasteSchema(ma.SQLAlchemyAutoSchema):
 
     id = ma.Int(dump_only=True)
-    author = ma.Nested('pastebinBackend.api.schemas.user.UserSchema', dump_only=True, exlude=["pastes"])
+    author = ma.Nested('pastebinBackend.api.schemas.user.UserSchema', dump_only=True, exclude=["pastes"])
     timeCreated = ma.DateTime(dump_only=True)
 
     class Meta:

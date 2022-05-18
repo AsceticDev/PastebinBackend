@@ -6,7 +6,7 @@ class UserSchema(ma.SQLAlchemyAutoSchema):
 
     id = ma.Int(dump_only=True)
     password = ma.String(load_only=True, required=True)
-    pastes = ma.List(ma.Nested("pastebinBackend.api.schemas.paste.PasteSchema"), exclude=["author"], dump_only=True)
+    pastes = ma.List(ma.Nested("pastebinBackend.api.schemas.paste.PasteSchema"),  dump_only=True, exclude=["author"],)
 
     class Meta:
         model = User
